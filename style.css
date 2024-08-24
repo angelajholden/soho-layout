@@ -66,12 +66,37 @@ a {
 }
 
 .header {
+	position: relative;
 	background-color: #222;
 	padding: 15px 0;
 }
 
+.header .inner_wrap {
+	padding: 0 15px;
+}
+
 .navigation {
+	position: static;
 	flex: 0 0 60%;
+
+	@media (max-width: 960px) {
+		position: absolute;
+		top: -15px;
+		left: -300px;
+		width: 300px;
+		max-width: 100%;
+		height: calc(100vh + 15px);
+		background-color: #fff;
+		box-shadow: 1px 0 2px 1px rgba(0, 0, 0, 0.1);
+		z-index: 1;
+		transition: left 300ms ease-in-out;
+	}
+}
+
+.navigation.active {
+	@media (max-width: 960px) {
+		left: 0;
+	}
 }
 
 .navigation ul {
@@ -82,14 +107,37 @@ a {
 	flex-flow: row wrap;
 	align-items: center;
 	justify-content: space-between;
+
+	@media (max-width: 960px) {
+		margin: 5rem 0 0;
+		flex-flow: column wrap;
+		align-items: flex-start;
+	}
+}
+
+.navigation li {
+	display: list-item;
+
+	@media (max-width: 960px) {
+		display: block;
+		width: 100%;
+		max-width: 100%;
+		margin: 5px 0;
+	}
 }
 
 .navigation li a {
+	display: block;
 	font-size: 0.9375rem;
 	text-decoration: none;
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	color: #fff;
+
+	@media (max-width: 960px) {
+		padding: 12px 27px;
+		color: #222;
+	}
 }
 
 button.icon {
@@ -97,8 +145,30 @@ button.icon {
 	border: none;
 	background: none;
 	display: block;
-	width: 35px;
-	height: 35px;
+	width: 48px;
+	height: 48px;
+}
+
+button.menu {
+	display: none;
+	cursor: pointer;
+
+	@media (max-width: 960px) {
+		display: block;
+	}
+}
+
+button.menu.active {
+	position: relative;
+	top: 0;
+	left: 0;
+	z-index: 2;
+}
+
+.menu.active svg {
+	display: block;
+	stroke: #222;
+	pointer-events: none;
 }
 
 .icon svg {
