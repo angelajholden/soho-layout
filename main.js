@@ -1,3 +1,13 @@
+function youAreHere() {
+	const links = document.querySelectorAll(".navigation a");
+	const href = document.location.href;
+	links.forEach((link) => {
+		if (link.href === href) {
+			link.classList.add("active");
+		}
+	});
+}
+
 function clickMenu() {
 	const icon = document.querySelector(".menu");
 	const nav = document.querySelector(".navigation");
@@ -36,6 +46,7 @@ function searchOpen() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+	youAreHere();
 	clickMenu();
 	searchOpen();
 });
