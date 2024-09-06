@@ -85,3 +85,15 @@ Chapters
 57:20 Working with the search SVG
 1:01:55 Preventing page scroll
 1:07:20 Git commit and recap
+
+Live Stream Five
+
+Chapters
+0:00 Checking the Stream
+0:40 Intro & Recap
+3:24 CSS: Media Queries & Breakpoint
+7:00 CSS: Responsive Hero
+9:20 CSS: Responsive Header Title
+12:45 CSS: Responsive Image & Content
+17:00 CSS: Responsive Social Icons & Instagram
+25:13 CSS: Responsive Footer
