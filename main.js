@@ -11,6 +11,7 @@ function youAreHere() {
 function clickMenu() {
 	const icon = document.querySelector(".menu");
 	const nav = document.querySelector(".navigation");
+	const body = document.querySelector("body");
 
 	icon.addEventListener("click", (e) => {
 		const clicked = e.target.classList.contains("active");
@@ -18,9 +19,11 @@ function clickMenu() {
 		if (clicked) {
 			icon.classList.remove("active");
 			nav.classList.remove("active");
+			body.classList.remove("active");
 		} else {
 			icon.classList.add("active");
 			nav.classList.add("active");
+			body.classList.add("active");
 		}
 	});
 }
