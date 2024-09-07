@@ -135,17 +135,20 @@ a {
 	}
 }
 
-.navigation ul li a + .sub-nav::after {
-	content: "X";
-	color: #fff;
-	clip-path: none;
-	overflow: visible;
-	position: absolute;
-	top: 100%;
-	left: 0;
-	width: 200px;
-	height: auto;
-	z-index: 1;
+.navigation ul li svg {
+	display: inline-block;
+	vertical-align: middle;
+	width: 20px;
+	height: 20px;
+	stroke: #fff;
+	transition: stroke 300ms ease-in-out;
+}
+
+.navigation ul li:hover svg,
+.navigation ul li:active svg,
+.navigation ul li a:focus svg,
+.navigation ul li:focus-within svg {
+	stroke: #000;
 }
 
 .navigation ul li:hover > a,
