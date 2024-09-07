@@ -8,6 +8,15 @@ function youAreHere() {
 	});
 }
 
+function hasSubNav() {
+	const topLi = document.querySelectorAll(".navigation ul li");
+	topLi.forEach((li) => {
+		if (li.querySelector("a + .sub-nav")) {
+			li.classList.add("has-sub-nav");
+		}
+	});
+}
+
 function clickMenu() {
 	const icon = document.querySelector(".menu");
 	const nav = document.querySelector(".navigation");
@@ -47,6 +56,7 @@ function searchOpen() {
 
 document.addEventListener("DOMContentLoaded", () => {
 	youAreHere();
+	hasSubNav();
 	clickMenu();
 	searchOpen();
 });
