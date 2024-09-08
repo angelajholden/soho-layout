@@ -230,7 +230,11 @@ a {
 	}
 }
 
-.navigation ul li .sub-nav {
+.navigation ul li .sub-nav,
+.navigation ul li:hover > .sub-nav,
+.navigation ul li:active > .sub-nav,
+.navigation ul li > .sub-nav:focus-within,
+.navigation ul li a:focus + .sub-nav {
 	@media (max-width: 960px) {
 		clip-path: none;
 		overflow: visible;
