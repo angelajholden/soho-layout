@@ -1,55 +1,42 @@
+function updateInnerText(id, text) {
+	const element = document.getElementById(id);
+	if (element) {
+		element.innerText = text;
+	}
+}
+
+function copyright() {
+	const year = new Date().getFullYear();
+	updateInnerText("date", year);
+}
+
 function youAreHere() {
 	const links = document.querySelectorAll(".navigation a");
-	const href = document.location.href;
+	const currentHref = window.location.href;
 	links.forEach((link) => {
-		if (link.href === href) {
+		if (link.href === currentHref) {
 			link.classList.add("active");
 		}
 	});
 }
 
-function clickMenu() {
-	const icon = document.querySelector(".menu");
-	const nav = document.querySelector(".navigation");
+function toggleActiveOnClick(selector, targetSelectors) {
+	const icon = document.querySelector(selector);
 	const body = document.querySelector("body");
 
-	icon.addEventListener("click", (e) => {
-		const clicked = e.target.classList.contains("active");
+	icon.addEventListener("click", () => {
+		const isActive = icon.classList.contains("active");
+		const toggleAction = isActive ? "remove" : "add";
 
-		if (clicked) {
-			icon.classList.remove("active");
-			nav.classList.remove("active");
-			body.classList.remove("active");
-		} else {
-			icon.classList.add("active");
-			nav.classList.add("active");
-			body.classList.add("active");
-		}
-	});
-}
-
-function searchOpen() {
-	const icon = document.querySelector(".search");
-	const drawer = document.querySelector(".search-drawer");
-	const body = document.querySelector("body");
-
-	icon.addEventListener("click", (e) => {
-		const clicked = e.target.classList.contains("active");
-
-		if (clicked) {
-			icon.classList.remove("active");
-			drawer.classList.remove("active");
-			body.classList.remove("active");
-		} else {
-			icon.classList.add("active");
-			drawer.classList.add("active");
-			body.classList.add("active");
-		}
+		[icon, body, ...targetSelectors.map((sel) => document.querySelector(sel))].forEach((el) => {
+			el.classList[toggleAction]("active");
+		});
 	});
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+	copyright();
 	youAreHere();
-	clickMenu();
-	searchOpen();
+	toggleActiveOnClick(".menu", [".navigation"]);
+	toggleActiveOnClick(".search", [".search-drawer"]);
 });
