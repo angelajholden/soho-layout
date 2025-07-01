@@ -1,13 +1,62 @@
-# Code with me!
+# Building and HTML &amp; CSS Landing Page: Code with me!
 
-## HTML & CSS (and a little JavaScript)
+![HTML](https://img.shields.io/badge/HTML5-%23E34F26.svg?style=flat&logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS3-%231572B6.svg?style=flat&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-%23F7DF1E.svg?style=flat&logo=javascript&logoColor=black)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+[![Watch the Build](https://img.shields.io/badge/YouTube-Watch-blue?logo=youtube)](https://www.youtube.com/playlist?list=PLiEcEGGtRVumTx-jL21z8rgjdQ-JKQNs7)
 
-Watch me write HTML & vanilla CSS while I build a Photoshop template called Soho. I have dozens of templates like this, and I want to show you how I approach building UIs.
+This is a simple, clean landing page built with HTML, CSS and vanilla JavaScript.
 
-## Find me on YouTube
+It’s based on a Photoshop mockup called **Soho** — purchased from [Envato/ThemeForest](https://themeforest.net/item/soho-personal-blog-theme-for-travelers-and-dreamers/16531508).
 
-https://www.youtube.com/@angelajholden
+The goal of this project is to turn a static design into accessible, modern code — and make it easy for anyone to customize or learn from, and it’s mobile responsive.
 
-## Find me on LinkedIn
+_This project is part of a free, open-source series focused on helping newer developers practice HTML/CSS with real-world examples._
 
-https://www.linkedin.com/in/angelajholden/
+---
+
+## 🔴 YouTube
+
+🎥 **Watch the build in action** on my [YouTube channel](https://www.youtube.com/@angelajholden) — or check out the
+[project playlist](https://www.youtube.com/playlist?list=PLiEcEGGtRVumTx-jL21z8rgjdQ-JKQNs7) to follow the full step-by-step process.
+
+---
+
+## 🔗 See the site live
+
+-   [Live demo on Heroku](https://soho-layout-9cc211b0fd69.herokuapp.com/)
+
+---
+
+## 🚀 Quick Start
+
+### ✅ Git Clone
+
+```bash
+git clone git@github.com:angelajholden/soho-layout.git
+```
+
+### ✅ Live Server
+
+If you're using VS Code, I recommend using the [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension to run and view the site in your browser.
+
+---
+
+## 📜 License
+
+This project is released as an open-source, free-to-use static website template under the [MIT License](LICENSE.md). You are welcome to **use, modify, and distribute** the code for personal or commercial projects, with or without attribution.
+
+---
+
+### 🎨 Design Attribution
+
+The visual design of this template was adapted from a commercial [Photoshop/Figma] mockup purchased from ThemeForest.
+
+That asset was used in accordance with the [ThemeForest Regular License](https://themeforest.net/licenses/standard), which permits distribution of a **finished end product** for free, but **does not allow redistribution of the original PSD or design source files**.
+
+-   The code in this repository is 100% original and written by me.
+-   No ThemeForest source files are included in this repo.
+-   This project may not be resold, re-uploaded, or redistributed as a template or theme on marketplaces.
+
+If you fork this project, please make sure your use complies with the terms of the ThemeForest license.
